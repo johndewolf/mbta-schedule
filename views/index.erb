@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12">
+			<h1 class="text-center">MBTA Train Times - <%= @tripData[0][:timestamp] %></h1>
+			<table class="table" id="trainData">
+				<thead class="thead-inverse">
+					<tr>
+						<th>Origin</th>
+						<th>Trip</th>
+						<th>Destination</th>
+						<th>Scheduled Time</th>
+						<th>Late?</th>
+						<th>Tracks</th>
+						<th>Current Status</th>
+					</tr>
+				</thead>
+				<% @tripData.each do |trip| %>
+				<tr>
+					<td><%= trip[:origin] %></td>
+					<td><%= trip[:trip] %></td>
+					<td><%= trip[:destination] %></td>
+					<td><%= trip[:scheduledtime] %></td>
+					<td><%= trip[:lateness] > 0 ? trip[:lateness] + " minutes"  : "No" %></td>
+					<td><%= trip[:track] %></td>
+					<td <%= trip[:status] == 'Cancelled' ? "class='warning'" : "class='success'" %>><%= trip[:status] %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
