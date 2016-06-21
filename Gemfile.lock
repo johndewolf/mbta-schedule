@@ -2,13 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     backports (3.3.5)
-    coffee-script (2.2.0)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.6.2)
     commonjs (0.2.7)
-    execjs (1.4.0)
-      multi_json (~> 1.0)
     font-awesome-less (4.6.2)
       less (>= 2.4.0)
     httparty (0.13.7)
@@ -22,9 +16,6 @@ GEM
     puma (2.0.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
-    rack-coffee (1.0.0)
-      coffee-script
-      rack
     rack-protection (1.5.0)
       rack
     rack-test (0.6.2)
@@ -52,7 +43,6 @@ DEPENDENCIES
   font-awesome-less
   httparty
   puma
-  rack-coffee
   sass
   sinatra
   sinatra-reloader

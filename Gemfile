@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 ruby '2.0.0'
 
 gem 'puma'
-gem 'rack-coffee'
 gem 'httparty'
 gem 'font-awesome-less'
 group :web do
