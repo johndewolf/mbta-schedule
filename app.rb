@@ -15,8 +15,9 @@ get '/' do
 		row[0] = DateTime.strptime(getDate(row[0]), "%s").strftime("%H:%M:%S EST")
 		row[4] = DateTime.strptime(getDate(row[4]), "%s").strftime("%H:%M:%S EST")
 		if row[5] > 0
-			row[5] = (row[5] / 60).to_s
+			row[5] = row[5] / 60
 		end
+
 		row.to_hash
 	}
   erb :index

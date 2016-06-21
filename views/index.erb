@@ -10,7 +10,7 @@
 						<th>Destination</th>
 						<th>Scheduled Time</th>
 						<th>Late?</th>
-						<th>Tracks</th>
+						<th>Track</th>
 						<th>Current Status</th>
 					</tr>
 				</thead>
@@ -20,7 +20,7 @@
 					<td><%= trip[:trip] %></td>
 					<td><%= trip[:destination] %></td>
 					<td><%= trip[:scheduledtime] %></td>
-					<td><%= trip[:lateness] > 0 ? trip[:lateness] + " minutes"  : "No" %></td>
+					<td><%= trip[:lateness] > 0 ? trip[:lateness].to_s + " minutes"  : "No" %></td>
 					<td><%= trip[:track] %></td>
 					<td <%= trip[:status] == 'Cancelled' ? "class='warning'" : "class='success'" %>><%= trip[:status] %></td>
 				</tr>
