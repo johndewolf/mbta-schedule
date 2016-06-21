@@ -1,7 +1,8 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12">
-			<h1 class="text-center">MBTA Train Times - <%= @tripData[0][:timestamp] %></h1>
+			<h1 class="text-center padding-top padding-btm">MBTA Train Times</h1>
+			<p class="text-muted">Current as of <%= @tripData[0][:timestamp] %></p>
 			<table class="table" id="trainData">
 				<thead class="thead-inverse">
 					<tr>

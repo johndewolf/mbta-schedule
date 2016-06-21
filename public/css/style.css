@@ -11,3 +11,11 @@ table {
 	background-color: #f44336;
 	color: white;
 }
+
+.padding-top {
+	padding-top: 20px;
+}
+
+.padding-btm {
+	padding-bottom: 20px;
+}
